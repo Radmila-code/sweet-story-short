@@ -96,3 +96,22 @@
         transform: scale(1); 
     } 
 }
+
+@media all and (max-width: 768px) { 
+    .contact-wrapper { 
+        padding: 20px; 
+    } 
+    .contact-form { 
+        padding: 20px; 
+    } 
+    .contact-form h2 { 
+        font-size: 1.5rem; 
+    } 
+    .contact-form input, .contact-form textarea { 
+        padding: 8px; 
+        margin-bottom: 15px; 
+    } 
+    .contact-form button { 
+        padding: 8px 16px; 
+    } 
+}
