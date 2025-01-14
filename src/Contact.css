@@ -144,4 +144,8 @@
     .form-group {
         width: 100%; /* Обеспечиваем, что form-group будет занимать всю ширину */
     }
+
+    .instagram-link {
+        font-size: 15px;
+    }
 }

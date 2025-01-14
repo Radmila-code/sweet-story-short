@@ -10,7 +10,15 @@ function ProductDetail({ product, onClose, onAddToCart }) {
         <h2>{product.name}</h2>
         <p>{product.description}</p>
         <p>Price: ${product.price}</p>
-        <button className="add-to-cart-button" onClick={() => onAddToCart(product)}>Add to Cart</button>
+        <button 
+          className="add-to-cart-button" 
+          onClick={() => {
+            onAddToCart(product);
+            onClose(); // Закрываем модальное окно после добавления в корзину
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
