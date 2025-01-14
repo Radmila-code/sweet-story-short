@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Home';
 import Products from './Products';
@@ -14,28 +15,8 @@ import './Products.css';
 import './Cart.css';
 
 function App() {
-  const [cartItems, setCartItems] = useState([]);
-
-  const handleAddToCart = (product) => {
-    const existingItem = cartItems.find(item => item.id === product.id);
-    if (existingItem) {
-      setCartItems(cartItems.map(item =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
-      ));
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
-  };
-
-  const handleRemoveFromCart = (product) => {
-    setCartItems(cartItems.filter(item => item.id !== product.id));
-  };
-
-  const handleUpdateQuantity = (product, quantity) => {
-    setCartItems(cartItems.map(item =>
-      item.id === product.id ? { ...item, quantity: parseInt(quantity) } : item
-    ));
-  };
+  const cartItems = useSelector(state => state.cartItems);
+  const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <Router>
@@ -63,16 +44,16 @@ function App() {
               </li>
             </ul>
             <Link className="nav-link cart-link" to="/cart">
-              Cart ({cartItems.reduce((total, item) => total + item.quantity, 0)})
+              Cart ({cartItemCount})
             </Link>
           </div>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products onAddToCart={handleAddToCart} />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/cart" element={<Cart cartItems={cartItems} onRemove={handleRemoveFromCart} onUpdateQuantity={handleUpdateQuantity} />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>

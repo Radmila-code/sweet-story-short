@@ -1,7 +1,19 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css'; // Подключаем стили для Cart
 
-function Cart({ cartItems, onRemove, onUpdateQuantity }) {
+function Cart() {
+  const cartItems = useSelector(state => state.cartItems);
+  const dispatch = useDispatch();
+
+  const handleRemove = (item) => {
+    dispatch({ type: 'REMOVE_FROM_CART', payload: item });
+  };
+
+  const handleUpdateQuantity = (item, quantity) => {
+    dispatch({ type: 'UPDATE_QUANTITY', payload: { id: item.id, quantity } });
+  };
+
   const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
 
   return (
@@ -11,8 +23,8 @@ function Cart({ cartItems, onRemove, onUpdateQuantity }) {
         <p>Your cart is empty</p>
       ) : (
         <ul>
-          {cartItems.map((item, index) => (
-            <li key={index} className="cart-item">
+          {cartItems.map((item) => (
+            <li key={item.id} className="cart-item">
               <img src={item.image} alt={item.name} className="cart-item-image" />
               <div>
                 <p>{item.name}</p>
@@ -21,10 +33,10 @@ function Cart({ cartItems, onRemove, onUpdateQuantity }) {
                   type="number"
                   className="quantity-input"
                   value={item.quantity}
-                  onChange={(e) => onUpdateQuantity(item, e.target.value)}
+                  onChange={(e) => handleUpdateQuantity(item, e.target.value)}
                   min="1"
                 />
-                <button onClick={() => onRemove(item)}>Remove</button>
+                <button onClick={() => handleRemove(item)}>Remove</button>
               </div>
             </li>
           ))}

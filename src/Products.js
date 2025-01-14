@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Подключаем стили AOS
@@ -17,9 +18,10 @@ const products = [
   { id: 10, name: 'Dubai chocolate', category: 'Chocolate', description: 'Dubai chocolate.', price: 15, image: `${process.env.PUBLIC_URL}/images/image18.jpg` },
 ];
 
-function Products({ onAddToCart }) {
+function Products() {
   const [category, setCategory] = useState('all');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -35,6 +37,10 @@ function Products({ onAddToCart }) {
 
   const handleCloseDetail = () => {
     setSelectedProduct(null);
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch({ type: 'ADD_TO_CART', payload: product });
   };
 
   return (
@@ -56,7 +62,12 @@ function Products({ onAddToCart }) {
           </li>
         ))}
       </ul>
-      {selectedProduct && <ProductDetail product={selectedProduct} onClose={handleCloseDetail} onAddToCart={onAddToCart} />}
+      {selectedProduct && 
+        <ProductDetail 
+          product={selectedProduct} 
+          onClose={handleCloseDetail} 
+          onAddToCart={handleAddToCart} 
+        />}
     </div>
   );
 }
