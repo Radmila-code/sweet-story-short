@@ -27,7 +27,7 @@ function Gallery() {
       <h1 data-aos="fade-up">Gallery</h1>
       <Carousel>
         {galleryImages.map(image => (
-          <Carousel.Item key={image.id} data-aos="fade-up" data-aos-delay="200">
+          <Carousel.Item key={image.id}>
             <img className="gallery-img" 
                  src={image.url} 
                  alt={image.alt} 
