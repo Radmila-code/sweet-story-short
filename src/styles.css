@@ -69,4 +69,15 @@ button:hover {
     margin-left: auto; /* Корзина останется справа */ 
     margin-right: 20px; /* Добавляем отступ справа для корзины */ 
 }
-  
+
+@media all and (max-width: 768px) {
+    .navbar-nav { 
+        flex-direction: column; 
+    } 
+    .navbar-nav .nav-item { 
+        margin: 10px 0; 
+    } 
+    .navbar .navbar-brand, .cart-link { 
+        margin: 0 auto; 
+    }
+} 
