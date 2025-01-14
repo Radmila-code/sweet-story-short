@@ -1,0 +1,77 @@
+.home-wrapper {
+    overflow-y: auto;
+    height: 100vh;
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+  
+.home-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f9fb; /* Цвет текста */
+    text-align: center;
+}
+  
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Масштабирование видео */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+  
+.home-content {
+    font-family: 'Unica One', cursive;
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    border-radius: 10px;
+}
+  
+.mute-button {
+    font-family: 'Unica One', cursive;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: #f8f9fb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.mute-button:hover {
+    background-color: #2b2b2b;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  background-color: #7e5d70; /* Задний фон цвета */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  color: #dcdddf;
+}
+
+.info-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.info-icon {
+  width: 100px; /* Увеличиваем размер иконок */
+  height: 100px; /* Увеличиваем размер иконок */
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

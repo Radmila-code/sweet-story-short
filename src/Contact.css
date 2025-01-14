@@ -1,0 +1,98 @@
+.contact-container {
+    text-align: center;
+}
+  
+.contact-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+}
+  
+.contact-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 400px;
+}
+  
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 15px;
+}
+  
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+  
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+  
+.submit-button {
+    padding: 10px 20px;
+    background-color: #fab1d8;
+    color: #3f3139;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.submit-button:hover {
+    background-color: #ce6ea1;
+}
+  
+.instagram-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #E4405F;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite; /* Пульсирующая анимация */
+}
+  
+.instagram-link:hover {
+    background-color: #D73553;
+}
+  
+.instagram-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+ 
+@keyframes pulse { 
+    0% { 
+        transform: scale(1); 
+    } 
+    50% { 
+        transform: scale(1.05); 
+    } 
+    100% { 
+        transform: scale(1); 
+    } 
+}

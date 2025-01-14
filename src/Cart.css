@@ -1,0 +1,30 @@
+.cart-container {
+    margin: 100px;
+    padding: 20px;
+    background: #f8f9fb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+  
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+  
+.total-price {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+  
