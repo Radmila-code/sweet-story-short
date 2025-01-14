@@ -19,6 +19,7 @@ function Cart({ cartItems, onRemove, onUpdateQuantity }) {
                 <p>Price: ${item.price}</p>
                 <input
                   type="number"
+                  className="quantity-input"
                   value={item.quantity}
                   onChange={(e) => onUpdateQuantity(item, e.target.value)}
                   min="1"
