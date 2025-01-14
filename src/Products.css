@@ -28,4 +28,14 @@
     object-fit: cover;
     border-radius: 8px;
 }
+
+@media all and (max-width: 768px) {
+    .product-item {
+        width: 150px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+}
   
