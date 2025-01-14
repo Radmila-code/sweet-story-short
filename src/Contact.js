@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaInstagram } from 'react-icons/fa';
-import './Contact.css'; // Подключаем стили для Contact
+import './Contact.css';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Подключаем стили AOS
+import 'aos/dist/aos.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -25,9 +25,7 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь можно добавить логику для обработки отправки формы, например, отправку на сервер
     console.log('Form submitted:', formData);
-    // Сброс формы
     setFormData({
       name: '',
       email: '',
@@ -36,7 +34,7 @@ function Contact() {
   };
 
   return (
-    <div className="container contact-container">
+    <div className="contact-container">
       <h1 data-aos="fade-up">Contact Us</h1>
       <p data-aos="fade-up">If you have any questions, feel free to write to us!</p>
       <div className="contact-content" data-aos="fade-up" data-aos-delay="200">
