@@ -1,0 +1,47 @@
+.navbar {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: space-between; /* Разделим содержимое navbar */
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 60px; /* Пример высоты логотипа, подберите подходящий размер */
+    width: auto;  /* Автоматическая ширина для сохранения пропорций */
+}
+
+.navbar .navbar-brand {
+    margin-right: auto; /* Логотип останется слева */
+    margin-left: 20px; /* Добавляем отступ слева для логотипа */
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* Центрируем меню навигации */
+    flex-grow: 1;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 20px; /* Увеличиваем расстояние между элементами навигации */
+}
+
+.nav-link {
+    font-size: 18px; /* Увеличиваем размер шрифта для лучшего чтения */
+}
+
+.cart-link { 
+    margin-left: auto; /* Корзина останется справа */ 
+    margin-right: 20px; /* Добавляем отступ справа для корзины */ 
+}
+
+@media all and (max-width: 768px) {
+    .navbar-nav { 
+        flex-direction: column; 
+    } 
+    .navbar-nav .nav-item { 
+        margin: 10px 0; 
+    } 
+    .navbar .navbar-brand, .cart-link { 
+        margin: 0 auto; 
+    }
+}
