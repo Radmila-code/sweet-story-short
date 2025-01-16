@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './Home.css'; // Подключаем стили для Home
-import AOS from 'aos'; import 'aos/dist/aos.css'; // Подключаем стили AOS
+import './Home.css'; 
+import AOS from 'aos'; import 'aos/dist/aos.css'; 
 
 
 function Home() {
