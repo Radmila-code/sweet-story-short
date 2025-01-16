@@ -9,7 +9,7 @@ body {
   
 .container {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    background: rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
