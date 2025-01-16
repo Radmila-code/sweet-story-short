@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar'; // Подключаем новый компонент Navbar
+import Navbar from './Navbar'; 
 import Home from './Home';
 import Products from './Products';
 import Contact from './Contact';
@@ -12,7 +12,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar /> {/* Используем компонент Navbar */}
+        <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
