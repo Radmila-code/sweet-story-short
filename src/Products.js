@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import ProductDetail from './ProductDetail';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Подключаем стили AOS
-import './Products.css'; // Подключаем стили для Products
-
+import 'aos/dist/aos.css'; 
+import './Products.css'; 
 const products = [
   { id: 1, name: 'Nut Cookies with Caramel Filling', category: 'Cookies', description: 'Delicious nut cookies filled with caramel.', price: 10, image: `${process.env.PUBLIC_URL}/images/product1.jpg` },
   { id: 2, name: 'Nut Cookies with Chocolate Filling', category: 'Cookies', description: 'Delicious nut cookies filled with chocolate.', price: 12, image: `${process.env.PUBLIC_URL}/images/product2.jpg` },
