@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navbar.css'; // Подключаем стили для Navbar
+import './Navbar.css'; 
 
 function Navbar() {
   const cartItems = useSelector((state) => state.cartItems);
