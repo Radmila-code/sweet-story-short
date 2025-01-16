@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; // Подключаем стили AOS
-import './Gallery.css'; // Подключаем стили для галереи
+import 'aos/dist/aos.css'; 
+import './Gallery.css'; 
 
 const galleryImages = [
   { id: 1, url: `${process.env.PUBLIC_URL}/images/image1.jpg`, alt: 'Nut Cookies with Caramel Filling' },
