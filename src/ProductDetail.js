@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductDetail.css'; // Подключаем стили для ProductDetail
+import './ProductDetail.css'; 
 
 function ProductDetail({ product, onClose, onAddToCart }) {
   return (
@@ -14,7 +14,7 @@ function ProductDetail({ product, onClose, onAddToCart }) {
           className="add-to-cart-button" 
           onClick={() => {
             onAddToCart(product);
-            onClose(); // Закрываем модальное окно после добавления в корзину
+            onClose(); 
           }}
         >
           Add to Cart
