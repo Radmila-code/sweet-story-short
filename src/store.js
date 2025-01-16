@@ -1,11 +1,9 @@
 import { createStore } from 'redux';
 
-// Начальное состояние
 const initialState = {
   cartItems: []
 };
 
-// Редуктор
 function rootReducer(state = initialState, action) {
   switch (action.type) {
     case 'ADD_TO_CART':
@@ -40,7 +38,6 @@ function rootReducer(state = initialState, action) {
   }
 }
 
-// Создание store
 const store = createStore(rootReducer);
 
 export default store;
