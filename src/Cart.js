@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import './Cart.css'; // Подключаем стили для Cart
+import './Cart.css'; 
 
 function Cart() {
   const cartItems = useSelector(state => state.cartItems);
