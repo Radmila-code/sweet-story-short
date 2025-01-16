@@ -1,7 +1,7 @@
 .contact-container {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для читаемости текста */
+    background: rgba(0, 0, 0, 0.5); 
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-left: 7rem;
@@ -80,7 +80,7 @@
     text-decoration: none;
     border-radius: 30px;
     transition: background-color 0.3s ease;
-    animation: pulse 2s infinite; /* Пульсирующая анимация */
+    animation: pulse 2s infinite; 
 }
 
 .instagram-link:hover {
@@ -104,7 +104,6 @@
     }
 }
 
-/* Медиа-запросы для мобильных устройств */
 @media all and (max-width: 768px) {
     .contact-container {
         margin-left: 2rem;
@@ -124,7 +123,7 @@
     .contact-form {
         width: 100%;
         padding: 20px;
-        max-width: 100%; /* Обеспечиваем, что форма будет занимать всю ширину */
+        max-width: 100%; 
     }
 
     .contact-form h2 {
@@ -142,7 +141,7 @@
     }
 
     .form-group {
-        width: 100%; /* Обеспечиваем, что form-group будет занимать всю ширину */
+        width: 100%; 
     }
 
     .instagram-link {
